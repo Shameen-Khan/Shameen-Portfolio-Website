@@ -54,7 +54,7 @@ export const portfolio = {
       description: 'A TEDx talk delivered on the international TEDx platform about why I left my book UNTITLED.',
       detail: 'A talk connecting the questions behind my philosophical poetry collection with the courage to leave it unnamed.',
       tags: ['TEDx speaker', 'Storytelling'], tech: [],
-      link: '', linkLabel: '', videoUrl: 'https://www.youtube-nocookie.com/embed/t5KsyuXAtK4',
+      link: 'https://www.youtube.com/watch?v=t5KsyuXAtK4', linkLabel: 'View my talk',
     },
     {
       id: 'untitled', number: '04', title: 'UNTITLED', category: 'Writing',

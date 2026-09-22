@@ -45,17 +45,22 @@
 .talk-platform{position:absolute;left:18px;right:12px;bottom:10px;height:18px;border-radius:50%;background:linear-gradient(90deg,#5b426c,#d4b6ff 48%,#4a355c);box-shadow:0 10px 16px #09061188;transform:rotateX(62deg) translateZ(-8px)}
 .talk-orbit{position:absolute;left:8px;top:18px;width:112px;height:76px;border:1px solid #e4b787aa;border-radius:50%;transform:rotateX(62deg) rotateZ(-18deg);box-shadow:0 0 18px #e4b78733}
 .talk-orbit::after{content:'TEDx';position:absolute;right:0;top:25px;padding:3px 5px;border:1px solid #e4b78788;border-radius:4px;background:#20152a;color:#f1d5ad;font:600 9px Manrope,sans-serif;letter-spacing:.08em;transform:rotateZ(18deg) rotateX(-62deg) translateZ(10px)}
-.talk-mic{position:absolute;left:63px;top:5px;width:12px;height:74px;border-radius:8px;background:linear-gradient(90deg,#201729,#d4b6ff 50%,#47335b);box-shadow:5px 5px 12px #09061188;transform:translateZ(14px)}
-.motion-enabled .project-talk[data-hovered] .talk-mic{transform:translate3d(var(--talk-mic-x,0px),var(--talk-mic-y,0px),14px);transition:transform .28s ease-out}
-.talk-mic::before{content:'';position:absolute;left:-8px;top:-13px;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f2ddff,#8d70a8 52%,#2a1d39);border:1px solid #e8d5ff99}
-.talk-mic i{position:absolute;left:5px;bottom:-15px;width:2px;height:17px;background:#d4b6ff99}
+.talk-mic{position:absolute;left:62px;top:-4px;width:32px;height:112px;transform-style:preserve-3d;transform:translateZ(28px) rotateZ(18deg) rotateY(-22deg);transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.mic-head,.mic-handle{position:absolute;transform-style:preserve-3d;left:50%}
+.mic-head{top:0;width:0;height:40px;--radius:19px;--facet-width:7.7px}
+.mic-handle{top:40px;width:0;height:70px;--radius:9px;--facet-width:3.7px}
+.mic-facet{position:absolute;top:0;left:calc(var(--facet-width) / -2);width:var(--facet-width);height:100%;transform:rotateY(calc(var(--facet) * 22.5deg)) translateZ(var(--radius));backface-visibility:hidden;background:linear-gradient(180deg,#d9cbe5,#84728f 45%,#362b46);border-inline:1px solid #ddd0ec20}
+.mic-head .mic-facet{border-radius:5px 5px 2px 2px;background:repeating-linear-gradient(0deg,transparent 0 2px,#17101f 2px 3px),repeating-linear-gradient(90deg,#a894b8 0 2px,#34283e 2px 3px)}
+.mic-cap{position:absolute;width:calc(var(--radius) * 2);height:calc(var(--radius) * 2);left:calc(var(--radius) * -1);top:calc(var(--radius) * -1);border-radius:50%;background:radial-gradient(circle at 30% 30%,#d7c4e6,#53445f);transform:rotateX(90deg)}
+.mic-handle .mic-cap{top:auto;bottom:calc(var(--radius) * -1);background:#34283e}
+.mic-band{position:absolute;left:6px;top:41px;width:20px;height:5px;background:linear-gradient(90deg,#694a2c,#f6d5a6,#8d673c);transform:translateZ(10px);border-radius:2px}
+.mic-switch{position:absolute;left:14px;top:59px;width:5px;height:12px;border:1px solid #dfc8ed66;border-radius:3px;background:#191220;transform:translateZ(10px)}
+.motion-enabled .project-talk[data-hovered] .talk-mic,.motion-enabled .project-talk:focus-within .talk-mic{transform:translate3d(var(--talk-mic-x,0px),calc(var(--talk-mic-y,0px) - 10px),42px) rotateZ(-12deg) rotateY(145deg) rotateX(-12deg)}
 .project-talk .project-cover{background:radial-gradient(ellipse at 76% 20%,#5c3e70,transparent 72%),#181326}
 .project-talk .project-wordmark{font-family:Manrope,sans-serif;font-size:39px;letter-spacing:-2px;color:#e5d7f6;flex-direction:row;flex-wrap:wrap;align-content:center;gap:2px}
 .project-talk .project-wordmark>span{color:var(--warm)}
 .project-talk .project-wordmark i{width:100%;color:#c4afdb;letter-spacing:.14em}
 .project-note{margin-top:25px;font-size:14px;color:#a79dad}
-.talk-video{position:relative;overflow:hidden;aspect-ratio:16/9;margin-top:24px;border:1px solid #d4b6ff24;border-radius:8px;background:#0b0a10}
-.talk-video iframe{display:block;width:100%;height:100%;border:0}
 .mini-book{position:absolute;top:5px;left:26px;width:80px;height:110px;transform-style:preserve-3d;transform:rotateY(-32deg) rotateX(12deg) rotateZ(12deg)}
 .book-cover{position:absolute;inset:0;background:linear-gradient(135deg,#665238,#201e19);border:1px solid #ceab7377;color:#f3d6a4;font:12px Georgia,serif;letter-spacing:1px;display:flex;align-items:center;justify-content:center;flex-direction:column;transform:translateZ(10px);box-shadow:inset 5px 0 6px #0005}
 .book-cover span{font-size:5px;letter-spacing:.5px;margin-top:12px}.book-pages{position:absolute;inset:3px -7px 3px 4px;background:repeating-linear-gradient(#d4bf9f 0 1px,#b3a083 1px 2px);transform:translateZ(0);box-shadow:12px 20px 22px #0005}.book-spine{position:absolute;left:-10px;top:0;width:20px;height:110px;transform:rotateY(-90deg);background:#33291e;border:1px solid #c3a16b55}

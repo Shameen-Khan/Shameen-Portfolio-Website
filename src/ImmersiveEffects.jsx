@@ -160,7 +160,11 @@ export function ProjectSculpture({ kind }) {
       <div className="lipstick-collar" />
       <div className="lipstick-base"><span>GS</span></div>
       <div className="lipstick-cap"><span>glowsync</span></div>
-    </div> : kind === 'voice' ? <div className="voice-bars">{[24, 42, 68, 92, 56, 78, 38].map((height, i) => <i key={i} style={{ '--bar-height': `${height}px`, '--bar-delay': `${-i * 0.18}s` }} />)}</div> : kind === 'talk' ? <div className="talk-stage"><div className="talk-orbit" /><div className="talk-mic"><i /></div><div className="talk-platform" /></div> : <div className="mini-book"><div className="book-pages" />
+    </div> : kind === 'voice' ? <div className="voice-bars">{[24, 42, 68, 92, 56, 78, 38].map((height, i) => <i key={i} style={{ '--bar-height': `${height}px`, '--bar-delay': `${-i * 0.18}s` }} />)}</div> : kind === 'talk' ? <div className="talk-stage"><div className="talk-orbit" /><div className="talk-mic">
+      <div className="mic-head">{Array.from({ length: 16 }, (_, i) => <i className="mic-facet" key={i} style={{ '--facet': i }} />)}<b className="mic-cap" /></div>
+      <div className="mic-handle">{Array.from({ length: 16 }, (_, i) => <i className="mic-facet" key={i} style={{ '--facet': i }} />)}<b className="mic-cap" /></div>
+      <span className="mic-band" /><span className="mic-switch" />
+    </div><div className="talk-platform" /></div> : <div className="mini-book"><div className="book-pages" />
       {[0, 1, 2].map(i => <div key={i} className="book-leaf" style={{ '--leaf': i }}><span>UNTITLED</span><i /><i /><i /><i /></div>)}
       <div className="book-cover"><div className="book-cover-title">UNTITLED<span>A world within.</span></div></div>
       <div className="book-spine" /></div>}
