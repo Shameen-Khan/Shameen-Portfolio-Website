@@ -157,7 +157,7 @@ export default function App() {
         <div className="hero-copy depth-heading"><p className="eyebrow"><span className="tiny-star" aria-hidden="true">✦</span> {p.role}</p>
           <h1 id="hero-title">{p.headline[0]}<br /><em>{p.headline[1]}</em></h1>
           <p className="hero-intro">{p.introduction}</p>
-          <div className="hero-actions"><a className="button button-primary" data-depth="7" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a className="button button-ghost" data-depth="7" href={p.resume} download>Resume <span aria-hidden="true">↓</span></a></div>
+          <div className="hero-actions"><a className="button button-primary" data-depth="7" href="#work">Explore my work <span aria-hidden="true">↓</span></a><ExternalLink className="button button-ghost" data-depth="7" href={p.resume}>Resume <Arrow /></ExternalLink></div>
           <p className="availability"><span aria-hidden="true" />{p.availability}</p>
         </div>
         <HeroScene motionEnabled={motion.enabled} />
